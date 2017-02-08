@@ -1,0 +1,194 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+$maincolor: #212121;
+$accentcolor1: #a4421e;
+$accentcolor2: #509e96;
+$accentcolor3: #e68a68;
+$accentcolor4: #b7e3de;
+$textcolor: #eeeeee;
+$serif: Georgia, "Times New Roman", Times, serif;
+$sans: Helvetica, Arial, sans-serif;
+
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 1.85em;
+  font-family: $sans;
+  background: $maincolor;
+  color: $textcolor;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+	color: $accentcolor1;
+	text-decoration: none;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+	&:hover {
+		color: $accentcolor3;
+	  -webkit-transition: .3s;
+	  -moz-transition: .3s;
+	  -o-transition: .3s;
+	}
+}
+
+.secondarylink {
+	color: $accentcolor2;
+	-webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+	&:hover {
+		color: $accentcolor4;
+		-webkit-transition: .3s;
+	  -moz-transition: .3s;
+	  -o-transition: .3s;
+	}
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.container {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.primary {
+	color: $accentcolor1;
+}
+
+.secondary {
+	color: $accentcolor2;
+}
+
+.title {
+	font-size: 4em;
+}
+
+.medtitle {
+	font-size: 1.5em;
+}
+
+.minititle {
+	font-size: 1.5em;
+}
+
+.smalltext {
+	font-size: .75em
+}
+
+.largevertspace {
+	padding: 10vh 0;
+}
+
+.medvertspace {
+	padding: 5vh 0;
+}
+
+.smallvertspace {
+	padding: 2vh 0;
+}
+
+.minivertspace {
+	padding: 1vh 0;
+}
+
+.pushdown {
+	margin-top: 10vh;
+}
+
+.twocol {
+	width: 49%;
+	margin: 1vh auto;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.threecol {
+	width: 32%;
+	margin: 1vh auto;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.regbutton {
+	font-weight: 400;
+	color: $accentcolor1;
+	padding: 1vh 1vw;
+	&:hover {
+		color: $accentcolor2;
+	}
+}
+
+.specbutton {
+	border: 3px solid $accentcolor1;
+	color: $accentcolor1;
+	padding: 1vh 1vw;
+	&:hover {
+		background: $accentcolor2;
+		border: 3px solid $accentcolor2;
+		color: $maincolor;
+	}
+}
+
+.textcenter {
+	text-align: center;
+}
+
+::selection {
+	background: $accentcolor2;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .container {
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+
+  .container {
+    width: 95%;
+  }
+
+  .twocol {
+  	width: 100%;
+  	text-align: center;
+  }
+
+  .threecol {
+  	width: 100%;
+  	text-align: center;
+  }
+
+  .title {
+  	font-size: 3em;
+  }
+
+}
