@@ -155,6 +155,21 @@ a {
 	}
 }
 
+.textfield {
+  width: 95%;
+  color: $textcolor;
+  font-family: $sans;
+  font-size: 1.25em;
+  padding: 2vh 2vw ;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid $accentcolor1;
+  background: $maincolor;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
 .textcenter {
 	text-align: center;
 }

@@ -1,0 +1,50 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="title largevertspace">
+      <%= link_to '878 media', root_url %>
+    </div>
+    <div class="medtitle medvertspace">
+      register
+    </div>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="minivertspace">
+        <%= f.label :username %>
+      </div>
+      <div class="minivertspace">
+        <%= f.text_field :username, autofocus: true, class: "textfield" %>
+      </div>
+
+      <div class="minivertspace">
+        <%= f.label :email %>
+      </div>
+      <div class="minivertspace">
+        <%= f.email_field :email, class: "textfield" %>
+      </div>
+
+      <div class="minivertspace">
+        <%= f.label :password %>
+      </div>
+      <div class="minivertspace">
+        <%= f.password_field :password, autocomplete: "off", class: "textfield" %>
+      </div>
+
+      <div class="minivertspace">
+        <%= f.label :password_confirmation %>
+      </div>
+      <div class="minivertspace">
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "textfield" %>
+      </div>
+
+      <div class="medvertspace">
+        <%= f.submit "Sign up", class: "specbutton" %>
+      </div>
+    <% end %>
+
+    <%= render "users/shared/links" %>
+
+  </div>
+  <%= render 'partials/home_footer' %>
+</div>

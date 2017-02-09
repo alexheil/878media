@@ -7,14 +7,20 @@
 			Translate your thoughts into words.
 		</div>
 		<div class="largevertspace">
-			<div class="twocol">
-				<%= link_to 'sign in', '#', class: "regbutton" %>
-			</div>
-			<div class="twocol">
-				<%= link_to 'register', '#', class: "specbutton" %>
-			</div>
+			<% if user_signed_in? %>
+				<div>
+					<%= link_to "sign out", sign_out_path, class: "regbutton" %>
+				</div>
+			<% else %>
+				<div class="twocol">
+					<%= link_to 'sign in', sign_in_path, class: "regbutton" %>
+				</div>
+				<div class="twocol">
+					<%= link_to 'register', register_path, class: "specbutton" %>
+				</div>
+			<% end %>
 		</div>
-		<div class="medvertspace">
+		<div class="medtitle medvertspace">
 			Recent Articles
 		</div>
 	</div>
